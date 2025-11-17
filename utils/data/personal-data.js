@@ -1,17 +1,17 @@
 export const personalData = {
-  name: "ABU SAID",
-  profile: '/profile.png',
-  designation: "Software Developer",
-  description: "My name is ABU SAID. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'abusaid7388@gmail.com',
-  phone: '+8801608797655',
-  address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
-  github: 'https://github.com/said7388',
-  facebook: 'https://www.facebook.com/abusaid.riyaz/',
-  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
-  twitter: 'https://twitter.com/said7388',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
-}
+  name: "Wissem Hammoudi",
+  profile: "/profile.png",
+  designation: "Data Engineer",
+  description:
+    "I am a dedicated and results-driven Data Engineer with hands-on experience in building data pipelines, event-driven architectures, real-time streaming systems, and AI-powered automation. I enjoy solving complex data challenges, designing scalable systems, and working with modern data engineering tools. I have experience in startups, full-stack development, and leading projects through my role as a Project Manager at Enet’com Junior Enterprise. I am always eager to learn, explore new technologies, and contribute to impactful data-driven solutions.",
+  email: "hammoudiwissem81@gmail.com",
+  phone: "+21656766351",
+  address: "Bizerte, Tunisia",
+  github: "https://github.com/wissemhammoudi",
+  facebook: "",
+  linkedIn: "https://www.linkedin.com/in/hammoudi-wissem/",
+  leetcode: "https://leetcode.com/u/eu1tOhE9tD/",
+  devUsername: "hammoudi_wissem_2a55b8cc2",
+  medium: "https://medium.com/@wissham25",
+  resume: "https://drive.google.com/drive/folders/1iG7iDAwGnJLWz5UaOO5CnLVUe3Ab-HjI?usp=sharing"
+};

@@ -4,10 +4,10 @@ import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiMedium } from "react-icons/si";
 
 function HeroSection() {
   return (
@@ -32,41 +32,51 @@ function HeroSection() {
           </h1>
 
           <div className="my-12 flex items-center gap-5">
-            <Link
-              href={personalData.github}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsGithub size={30} />
-            </Link>
-            <Link
-              href={personalData.linkedIn}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsLinkedin size={30} />
-            </Link>
-            <Link
-              href={personalData.facebook}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaFacebook size={30} />
-            </Link>
-            <Link
-              href={personalData.leetcode}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
-              href={personalData.twitter}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+            {personalData.github && personalData.github.trim() !== '' && (
+              <Link
+                href={personalData.github}
+                target='_blank'
+                className="transition-all text-pink-500 hover:scale-125 duration-300"
+              >
+                <BsGithub size={30} />
+              </Link>
+            )}
+            {personalData.linkedIn && personalData.linkedIn.trim() !== '' && (
+              <Link
+                href={personalData.linkedIn}
+                target='_blank'
+                className="transition-all text-pink-500 hover:scale-125 duration-300"
+              >
+                <BsLinkedin size={30} />
+              </Link>
+            )}
+            {personalData.facebook && personalData.facebook.trim() !== '' && (
+              <Link
+                href={personalData.facebook}
+                target='_blank'
+                className="transition-all text-pink-500 hover:scale-125 duration-300"
+              >
+                <FaFacebook size={30} />
+              </Link>
+            )}
+            {personalData.leetcode && personalData.leetcode.trim() !== '' && (
+              <Link
+                href={personalData.leetcode}
+                target='_blank'
+                className="transition-all text-pink-500 hover:scale-125 duration-300"
+              >
+                <SiLeetcode size={30} />
+              </Link>
+            )}
+            {personalData.medium && personalData.medium.trim() !== '' && (
+              <Link
+                href={personalData.medium}
+                target='_blank'
+                className="transition-all text-pink-500 hover:scale-125 duration-300"
+              >
+                <SiMedium size={30} />
+              </Link>
+            )}
           </div>
 
           <div className="flex items-center gap-3">
@@ -100,82 +110,91 @@ function HeroSection() {
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
-                <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
+                <span className="mr-2 text-pink-500">coder</span>
                 <span className="mr-2 text-pink-500">=</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">{`'name'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
                 <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Abu Said</span>
+                <span className="text-amber-300">{personalData.name}</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-white">{`'skills'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
+                <span className="text-gray-400">{`[`}</span>
+                <span className="text-gray-400">{`'`}</span>
+                <span className="text-amber-300">Python</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">FastAPI</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">Apache Kafka</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">Apache Spark</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">dbt</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">DuckDB</span>
+                <span className="text-gray-400">{`', '`}</span>
+                <span className="text-amber-300">SQL</span>
+                <span className="text-gray-400">{`', '`}</span>
                 <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-gray-400">{`', '`}</span>
                 <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"'],"}</span>
+                <span className="text-gray-400">{`'],`}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">{`'hard_worker'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">{`'quick_learner'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">{`'problem_solver'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
+                <span className="text-orange-400">True</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-green-400">{`'hireable'`}</span>
+                <span className="mr-2 text-pink-500">:</span>
+                <span className="text-orange-400">lambda</span>
+                <span className="text-gray-400">: (</span>
               </div>
               <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-gray-400">{`(`}</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-cyan-400">coder</span>
+                <span className="text-gray-400">[</span>
+                <span className="text-amber-300">{`'hard_worker'`}</span>
+                <span className="text-gray-400">]</span>
+                <span className="text-amber-300"> and</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-cyan-400">coder</span>
+                <span className="text-gray-400">[</span>
+                <span className="text-amber-300">{`'problem_solver'`}</span>
+                <span className="text-gray-400">]</span>
+                <span className="text-amber-300"> and</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">len</span>
+                <span className="text-gray-400">(</span>
+                <span className="text-cyan-400">coder</span>
+                <span className="text-gray-400">[</span>
+                <span className="text-amber-300">{`'skills'`}</span>
+                <span className="text-gray-400">])</span>
+                <span className="text-amber-300"> &gt;= </span>
                 <span className="text-orange-400">5</span>
               </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
-              <div><span className="text-gray-400">{`};`}</span></div>
+              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">)</span></div>
+              <div><span className="text-gray-400">{`}`}</span></div>
             </code>
           </div>
         </div>

@@ -1,6 +1,8 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from 'next/link';
+import { FaCode, FaPlay } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
 
@@ -23,21 +25,23 @@ function ProjectCard({ project }) {
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
-            <span className="mr-2 text-pink-500">const</span>
-            <span className="mr-2 text-white">project</span>
+            <span className="mr-2 text-pink-500">project</span>
             <span className="mr-2 text-pink-500">=</span>
             <span className="text-gray-400">{'{'}</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">{`'name'`}</span>
+            <span className="mr-2 text-pink-500">:</span>
             <span className="text-gray-400">{`'`}</span>
             <span className="text-amber-300">{project.name}</span>
             <span className="text-gray-400">{`',`}</span>
           </div>
 
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className=" text-white">tools:</span>
-            <span className="text-gray-400">{` ['`}</span>
+            <span className="text-white">{`'tools'`}</span>
+            <span className="mr-2 text-pink-500">:</span>
+            <span className="text-gray-400">{`[`}</span>
+            <span className="text-gray-400">{`'`}</span>
             {
               project.tools.map((tag, i) => (
                 <React.Fragment key={i}>
@@ -49,20 +53,49 @@ function ProjectCard({ project }) {
                 </React.Fragment>
               ))
             }
-            <span className="text-gray-400">{"],"}</span>
+            <span className="text-gray-400">{"'],"}</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">{`'my_role'`}</span>
+            <span className="mr-2 text-pink-500">:</span>
+            <span className="text-gray-400">{`'`}</span>
             <span className="text-orange-400">{project.role}</span>
-            <span className="text-gray-400">,</span>
+            <span className="text-gray-400">{`',`}</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
-            <span className="text-gray-400">,</span>
+            <span className="text-white">{`'description'`}</span>
+            <span className="mr-2 text-pink-500">:</span>
+            <span className="text-gray-400">{`'`}</span>
+            <span className="text-cyan-400">{project.description}</span>
+            <span className="text-gray-400">{`'`}</span>
           </div>
-          <div><span className="text-gray-400">{`};`}</span></div>
+          <div><span className="text-gray-400">{`}`}</span></div>
         </code>
+      </div>
+      <div className="flex items-center justify-center gap-3 px-4 lg:px-8 py-4 border-t-[2px] border-indigo-900">
+        {project.demo && (
+          <Link
+            href={project.demo}
+            target='_blank'
+            className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-gradient-to-r from-pink-500 to-violet-600 text-white hover:from-pink-600 hover:to-violet-700 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/50 no-underline"
+          >
+            <FaPlay size={14} />
+            <span className="text-sm font-semibold">Demo</span>
+          </Link>
+        )}
+        {project.code && (
+          <Link
+            href={project.code}
+            target='_blank'
+            className="flex items-center gap-2 px-5 py-2.5 rounded-md border-2 border-[#16f2b3] text-[#16f2b3] hover:bg-[#16f2b3] hover:text-[#0d1224] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#16f2b3]/50 no-underline"
+          >
+            <FaCode size={14} />
+            <span className="text-sm font-semibold">Code</span>
+          </Link>
+        )}
+        {!project.demo && !project.code && (
+          <span className="text-gray-500 text-sm italic">No links available</span>
+        )}
       </div>
     </div>
   );
