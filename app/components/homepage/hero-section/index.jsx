@@ -123,27 +123,37 @@ function HeroSection() {
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className="text-white">{`'skills'`}</span>
-                <span className="mr-2 text-pink-500">:</span>
-                <span className="text-gray-400">{`[`}</span>
-                <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Python</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">FastAPI</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">Apache Kafka</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">Apache Spark</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">dbt</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">DuckDB</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">SQL</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{`', '`}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{`'],`}</span>
+                <span className="text-gray-400">[</span>
+
+                <span className="text-gray-400">'</span><span className="text-amber-300">Python</span><span className="text-gray-400">', '</span>
+
+                <span className="text-amber-300">Apache Kafka</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Apache Spark</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">dbt</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Debezium</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Meltano</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">dlt</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">SQLMesh</span><span className="text-gray-400">', '</span>
+
+                <span className="text-amber-300">SQL</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">PostgreSQL</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">MongoDB</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Firebase</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">SQL Server</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">DuckDB</span><span className="text-gray-400">', '</span>
+
+                <span className="text-amber-300">FastAPI</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Node.js</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Express.js</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">React.js</span><span className="text-gray-400">', '</span>
+
+                <span className="text-amber-300">Docker</span><span className="text-gray-400">', '</span>
+
+                <span className="text-amber-300">Power BI</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Google Sheets</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Apache Superset</span><span className="text-gray-400">', '</span>
+                <span className="text-amber-300">Dash</span><span className="text-gray-400">']</span>
+
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">{`'hard_worker'`}</span>
