@@ -20,6 +20,7 @@ export const projectsData = [
     role: "Data Engineering Intern",
     code: "https://github.com/wissemhammoudi/even-driven-pipeline-builder",
     demo: "",
+    topic: ["Data Engineering", "Web Development", "Business Intelligence"]
   },
   {
     id: 2,
@@ -39,6 +40,7 @@ export const projectsData = [
     role: "AI & Data Engineering Intern",
     code: "https://github.com/wissemhammoudi/RH-chabot-using-RAG-Fusion",
     demo: "",
+    topic: ["Artificial Intelligence", "Data Engineering", "Web Development"]
   },
   {
     id: 3,
@@ -49,6 +51,7 @@ export const projectsData = [
     role: "Data Engineering Intern",
     code: "",
     demo: "",
+    topic: ["Database Management", "Business Intelligence"]
   },
   {
     id: 4,
@@ -59,6 +62,7 @@ export const projectsData = [
     role: "Data Analyst / BI Developer",
     code: "https://github.com/wissemhammoudi/Fantazy-Premier-League-Power-Bi-dashboard",
     demo: "",
+    topic: ["Business Intelligence", "Analytics"]
   },
   {
     id: 5,
@@ -69,6 +73,7 @@ export const projectsData = [
     role: "Data Engineer",
     code: "https://github.com/wissemhammoudi/etl-using-Dbt-and-DuckDB.git",
     demo: "",
+    topic: ["Data Engineering", "ETL & Data Transformation"]
   },
   {
     id: 6,
@@ -79,6 +84,7 @@ export const projectsData = [
     role: "Data Engineer",
     code: "https://github.com/wissemhammoudi/Spark",
     demo: "",
+    topic: ["Data Engineering", "Data Streaming", "Business Intelligence"]
   },
   {
     id: 7,
@@ -89,6 +95,7 @@ export const projectsData = [
     role: "Frontend Developer",
     code: "https://github.com/wissemhammoudi/Site-Web-Dynamique-Mental-Health-Blog--MERN-",
     demo: "https://site-web-statique-forum-enetcom-2023.onrender.com/",
+    topic: ["Web Development"]
   },
   {
     id: 8,
@@ -99,6 +106,7 @@ export const projectsData = [
     role: "Full Stack Developer",
     code: "https://github.com/wissemhammoudi/Site-Web-Statique-Forum-Enetcom-2023",
     demo: "https://site-web-dynamique-mental-health-blog.onrender.com/",
+    topic: ["Full-Stack Development", "Web Development"]
   },
   {
     id: 9,
@@ -109,5 +117,6 @@ export const projectsData = [
     role: "Full Stack Developer",
     code: "https://github.com/wissemhammoudi/booking_n8n",
     demo: "",
+    topic: ["Web Applications", "Full-Stack Development", "Workflow Automation"]
   }
 ];
